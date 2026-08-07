@@ -46,11 +46,16 @@ In *this* current repo, do:
 ```bash
 gcc -o build-cla build-cla.c
 ./build-cla spl.bin \
-    linux-pnx49xx/arch/arm/boot/dts/nxp/pnx/pnx49xx-samsung-gt-e2121b.dtb \
+    linux-pnx49xx/arch/arm/boot/dts/nxp/pnx/pnx4852-samsung-gt-e2121b.dtb \
     linux-pnx49xx/arch/arm/boot/xipImage > image.cla
 ```
 
 Then you'll get `image.cla` file.
+
+*NOTE: The pre-built image contains a patched .dtb file in which the `reg`
+property in the `flash` node points to address `0x91000000` instead of
+`0x90000000`. This decision was taken to prevent the XIP kernel from total
+freezing on the detection of the flash chip.*
 
 ## Join us
 
