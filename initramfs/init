@@ -3,7 +3,6 @@
 enable_tty() {
 	while true; do
 		getty "$1" "$2" "$3"
-		clear
 	done
 }
 
