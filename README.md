@@ -6,7 +6,7 @@ Just download precompiled .cla firmware file and simply flash it to the phone
 using [my Samsung Swift flasher](https://github.com/bhmsgame06/sflasher) or
 proprietary [PNX49xx Downloader v0.3 Lite For GT-E2370](https://mega.nz/folder/2aoVnJJJ#ovZJG4cbvIOqLVEJBHrQSQ/folder/2apUFSjS),
 these flashers are fully compatible with GT-E2121B. After flashing you can do
-power on, use `screen` or PuTTY on 9600 baud to see the logs and shell.
+power on, use `screen` or PuTTY on 115200 baud to see the logs and shell.
 
 ## How to build
 
