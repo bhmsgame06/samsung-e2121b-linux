@@ -24,8 +24,8 @@ hostname -F /etc/hostname
 
 # enabling t9 input overlay and ttys themselves
 t9tty /dev/input/event0 1 &
-enable_tty 9600 ttyS0 linux &
-enable_tty 9600 ttyS1 linux &
+enable_tty 115200 ttyS0 linux &
+enable_tty 115200 ttyS1 linux &
 enable_tty 38400 tty1 linux &
 enable_tty 38400 tty2 linux &
 enable_tty 38400 tty3 linux &

@@ -35,8 +35,8 @@ _start:
 	mov r1, #0xc0
 	str r1, [r0, #0xc]
 
-	/* default baud 9600 */
-	ldr r1, =0xa93
+	/* default baud 115200 */
+	ldr r1, =0xe0
 	ldr r0, =PNX4852_UART0_BASE
 	str r1, [r0, #0x8]
 	ldr r0, =PNX4852_UART1_BASE
