@@ -22,22 +22,19 @@ Just run this command in your terminal:
 
 ### Building the kernel
 
-Clone the kernel repo:
-
 ```bash
 git clone --depth=1 https://github.com/bhmsgame06/linux-pnx49xx
-```
+cd linux-pnx49xx
 
-Copy `initramfs` to `linux-pnx49xx/usr/initramfs` and
-`kernel.config` to `linux-pnx49xx/.config`.
+git checkout linux-pnx49xx
+
+cp ../samsung-e2121b-linux/kernel.config ./.config
+cp -r ../samsung-e2121b-linux/initramfs ./usr/initramfs
+
+fakeroot make ARCH=arm CROSS_COMPILE=arm-none-eabi- -j$(nproc) xipImage dtbs
+```
 
 You can edit the kernel config if you want to do so.
-
-Building the kernel:
-
-```bash
-fakeroot make -C linux-pnx49xx/ ARCH=arm CROSS_COMPILE=arm-none-eabi- -j$(nproc) xipImage dtbs
-```
 
 ### Building .cla image
 
