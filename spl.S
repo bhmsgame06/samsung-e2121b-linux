@@ -5,7 +5,7 @@
 /* MMIO addresses */
 #define PNX4852_BUS_BASE	0x70000000
 #define PNX4852_SYS_BASE	0x70002000
-#define PNX4852_HF_BASE		0x70004000
+#define PNX4852_PERI_BASE	0x70004000
 #define PNX4852_UART0_BASE	0x70007000
 #define PNX4852_UART1_BASE	0x70006000
 #define PNX4852_PSEQ_BASE	0x7001b000
@@ -84,8 +84,8 @@ _start:
 	str r1, [r0, #0x10]
 
 
-	/* enabling UART Handsfree ports */
-	ldr r0, =PNX4852_HF_BASE
+	/* enabling UART periphery ports */
+	ldr r0, =PNX4852_PERI_BASE
 	mov r1, #0xc0
 	str r1, [r0, #0xc]
 
